@@ -24,7 +24,7 @@ jobs:
         FILE_PATH="community/$AUTHOR_NAME.md"
         
         # Obtém a lista de arquivos modificados usando a CLI do GitHub
-        files_changed=$(gh api repos/digitalinnovationone/dio-lab-open-source/pulls/${{ github.event.pull_request.number }}/files --paginate | jq -r '.[].filename' | grep '^community/')    
+        files_changed=$(gh api repos/wangzhiwei18/dio-lab-open-source/pulls/${{ github.event.pull_request.number }}/files --paginate | jq -r '.[].filename' | grep '^community/')    
         
         # Lista os arquivos modificados para fins de depuração
         echo "Changed files:"
